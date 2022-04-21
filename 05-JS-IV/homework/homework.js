@@ -95,7 +95,7 @@ function tienePropiedad(objeto, propiedad) {
   // De lo contrario, devuelve "false"
   // Tu código:
   var objeto = {
-    key:'propiedad'
+    propiedad: 'propiedad'
   }
 
   if(objeto['propiedad']){
@@ -103,7 +103,6 @@ function tienePropiedad(objeto, propiedad) {
   } else {
     return false;
   }
-  //false no tiene la propiedad solo el valor.
 }
 
 function verificarPassword(usuario, password) {
@@ -111,23 +110,30 @@ function verificarPassword(usuario, password) {
   // Devuelve "true" si coinciden
   // De lo contrario, devuelve "false"
   // // Tu código:
-  var persona = {
+  var objeto = {
     usuario: 'juan',
     password: 'juan1234'
   }
-  if(persona['password'] === 'juan1234'){
+  if(objeto['password'] === password && objeto['usuario'] === usuario ){
     return true;
   } else {
     return false;
   }
-
 }
 
 function actualizarPassword(usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevagPassword"
   // Devuelve el objeto
   // Tu código:
+  var usuario = {
+    usuario: 'juan',
+    password: 'juanito123'
+  }
+  usuario.password = nuevaPassword;
+  
+  return usuario;
 }
+
 
 function agregarAmigo(usuario, nuevoAmigo) {
   // "usuario" tiene una propiedad llamada "amigos" que es un array
