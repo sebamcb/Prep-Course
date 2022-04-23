@@ -64,7 +64,7 @@ function nuevoUsuario(nombre, email, password) {
   // Tu código:
   var objeto = {
     nombre: 'juan',
-    email:  'juan@gmail.com',
+    email: 'juan@gmail.com',
     password: 'juan1234'
   }
   return objeto;
@@ -76,10 +76,10 @@ function tieneEmail(usuario) {
   // Tu código:
   var usuario = {
     nombre: 'juan',
-    email:  'juan@gmail.com',
+    email: 'juan@gmail.com',
     password: 'juan1234'
   }
-  if(usuario['email']){
+  if (usuario['email']) {
     return true;
   } else {
     return false;
@@ -98,7 +98,7 @@ function tienePropiedad(objeto, propiedad) {
     propiedad: 'propiedad'
   }
 
-  if(objeto['propiedad']){
+  if (objeto['propiedad']) {
     return true;
   } else {
     return false;
@@ -114,7 +114,7 @@ function verificarPassword(usuario, password) {
     usuario: 'juan',
     password: 'juan1234'
   }
-  if(objeto['password'] === password && objeto['usuario'] === usuario ){
+  if (objeto['password'] === password && objeto['usuario'] === usuario) {
     return true;
   } else {
     return false;
@@ -130,7 +130,7 @@ function actualizarPassword(usuario, nuevaPassword) {
     password: 'juanito123'
   }
   usuario.password = nuevaPassword;
-  
+
   return usuario;
 }
 
@@ -140,6 +140,11 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // // Tu código:
+  var usuario = {
+    amigos: ['juan', 'jose']
+  }
+  usuario.amigos.push('carlos')
+  return usuario;
 }
 
 function pasarUsuarioAPremium(usuarios) {
@@ -148,6 +153,12 @@ function pasarUsuarioAPremium(usuarios) {
   // Define cada propiedad "esPremium" de cada objeto como "true"
   // Devuelve el array de usuarios
   // Tu código:
+  var usuarios = [];
+
+  for (i = 0; i < usuarios.length; i++) {
+
+    usuarios[i].esPremium = true;
+  }
 }
 
 function sumarLikesDeUsuario(usuario) {
@@ -157,7 +168,17 @@ function sumarLikesDeUsuario(usuario) {
   // Suma todos los likes de todos los objetos "post"
   // Devuelve la suma
   // Tu código:
+  sum = 0
+  usuario = {
+    post: [2, 3, 4, 5, 10, 20],
+  }
+  for (i = 0; i < usuario.post.length; i++) {
+
+    sum = usuario.post[i] + sum;
+  }
+  return sum
 }
+
 
 function agregarMetodoCalculoDescuento(producto) {
   // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
@@ -170,6 +191,14 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
 
+  producto = {
+    precio: 2300,
+    dscto: 0.2,
+    calcularPrecioDscto: function () {
+      return this.precio - (this.precio * this.dscto)
+    }
+  }
+  return producto;
 }
 
 // No modificar nada debajo de esta línea
