@@ -1,0 +1,59 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+h1,h3,h4{
+    color: chocolate;
+    text-align: center;
+}
+
+img{
+    width: 400px;
+}
+#thirdDiv{
+    display: flex;
+    justify-content: center;
+    background-color: blanchedalmond;
+    max-height: 600px; 
+    min-width: 500px;
+    padding: 50px;
+    border: 1rem solid red;
+    
+    
+}
+#thirdDiv > ul{
+    display: flex;
+    flex-direction: row;
+    column-gap: 1rem;
+    
+
+}
+#thirdDiv > ul > li{
+    display: flex;
+    text-decoration: none;
+}
+.divClass{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+#spanId{
+    
+    font-size: 18px;
+    margin: 50px;
+    text-align: center;
+}
+a{
+    text-align: center;
+    font-size: medium;
+    text-decoration: none;
+    margin: 50px;
+}
